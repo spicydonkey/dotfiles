@@ -1,10 +1,18 @@
 """ Pathogen load
 filetype off
-execute pathogen#infect()
+"execute pathogen#infect()
 
 """ vim-plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   Unix install:
+"   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 " List the plugins here... (`Plug` commands)
+
+" Seoul256
+Plug 'junegunn/seoul256.vim'
 
 " goyo
 Plug 'https://github.com/junegunn/goyo.vim.git'
@@ -14,9 +22,7 @@ Plug 'https://github.com/junegunn/limelight.vim.git'
 
 " MATLAB
 "Plug 'https://github.com/lazywei/vim-matlab.git'
-
-" vim-MATLAB
-Plug 'https://github.com/daeyun/vim-matlab.git'
+"Plug 'https://github.com/daeyun/vim-matlab.git'
 "Plug 'daeyun/vim-matlab'
 
 call plug#end()     " update &runtimepath and init plugin system
@@ -90,10 +96,10 @@ set visualbell
 set t_vb=
 
 " use matchit
-packadd! matchit
+"packadd! matchit
 
 """ MATLAB
-source ~/.vim/macros/matchit.vim
+"source ~/.vim/macros/matchit.vim
 
 " Integration of the mlint Matlab code checker with the :make command
 autocmd BufEnter *.m    compiler mlint
