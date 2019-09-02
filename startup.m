@@ -1,4 +1,6 @@
-% startup_demo.m
+% startup.m
+%
+% Edited from startup_demo.m
 % Matlab configuration file
 % DKS
 %
@@ -20,6 +22,10 @@ addpath(genpath(pathhome));
 set(0,'defaulttextInterpreter','latex') %latex axis labels
 set(groot, 'defaultAxesTickLabelInterpreter','latex'); 
 set(groot, 'defaultLegendInterpreter','latex');
+
+% DEFAULT FONT
+set(0,'DefaultTextFontname', 'CMU Serif');
+set(0,'DefaultAxesFontName', 'CMU Serif');
 
 % FIGURE BACKGROUND
 set(0,'defaultfigurecolor',[1,1,1]);
