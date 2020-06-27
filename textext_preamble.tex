@@ -1,0 +1,99 @@
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color}
+
+\usepackage{gensymb}
+\usepackage{dsfont}
+
+% \usepackage{dks_thesis}
+% BEGIN dks_thesis.sty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% David's custom commands
+%
+% DKS 2020
+%
+
+%% REQUIRED PACKAGES
+\usepackage{physics}
+
+
+%% ADDITIONAL PACKAGES
+% SI UNITS
+\usepackage{siunitx}
+\DeclareSIUnit\gauss{G}
+\sisetup{
+    %list-units = brackets ,
+    %range-units = brackets ,
+    %scientific-notation = true
+}%
+
+
+%% FORMATTING
+\newcommand{\minispace}{\nobreak\hspace{.16667em}}      % \kern-sized spacing with no break
+
+%% DRAFTING 
+\newcommand{\Com}[1]{{\color{red}{#1}\normalcolor}}
+
+
+%% font
+\newcommand{\mc}{\mathcal}
+
+
+%% PHYSICS
+\newcommand{\x}{\mathbf{r}}
+\newcommand{\av}[1]{\left\langle #1 \right\rangle}
+\newcommand{\proj}[1]{\ket{#1}\bra{#1}}
+\renewcommand{\k}{{\bf k}}
+
+\newcommand{\vJ}{\va*{J}}       % angular momentum
+\newcommand{\J}{\hat{J}}        
+\newcommand{\Jx}{\hat{J}_x}
+\newcommand{\Jy}{\hat{J}_y}
+\newcommand{\Jz}{\hat{J}_z}
+
+\newcommand{\vSp}{\va*{S}}      % spin
+\newcommand{\Sp}{\hat{S}}       
+\newcommand{\Spx}{\hat{S}_x}
+\newcommand{\Spy}{\hat{S}_y}
+\newcommand{\Spz}{\hat{S}_z}
+
+\newcommand{\vsig}{\va*{\sigma}}    % Pauli oper
+\newcommand{\sig}{\hat{\sigma}}
+\newcommand{\sigx}{\hat{\sigma}_x}
+\newcommand{\sigy}{\hat{\sigma}_y}
+\newcommand{\sigz}{\hat{\sigma}_z}
+\newcommand{\Id}{\mathds1}
+
+\newcommand{\kup}{\ket{\uparrow}}
+\newcommand{\kdown}{\ket{\downarrow}}
+\newcommand{\aup}{\uparrow}
+\newcommand{\adown}{\downarrow}
+
+\newcommand{\Psip}{\ket{\Psi^+}}
+\newcommand{\Psim}{\ket{\Psi^-}}
+\newcommand{\Phip}{\ket{\Phi^+}}
+\newcommand{\Phim}{\ket{\Phi^-}}
+
+\newcommand{\rhop}{\hat{\rho}_+}
+
+\newcommand{\fPsi}{\hat{\Psi}}		% field operator
+\newcommand{\A}{\hat{a}}        	% annihilation operator
+\newcommand{\Ad}{\hat{a}^\dagger}  	% creation
+
+
+\newcommand{\LSterm}[4]{#1\minispace\textsuperscript{#2}\text{#3}\textsubscript{#4}}     % LS coupling symbols
+
+% helium
+\newcommand{\He}{He$^*$}       
+\newcommand{\mJ}{m_\text{J}}
+\newcommand{\ttso}{\LSterm{2}{3}{S}{1}}     % commonly used terms macro
+\newcommand{\ttpz}{\LSterm{2}{3}{P}{0}}
+\newcommand{\ttpo}{\LSterm{2}{3}{P}{1}}
+\newcommand{\ttpt}{\LSterm{2}{3}{P}{2}}
+
+
+%% REFERENCES AND CITATIONS
+
+% \mypublication{title}{authors}{journal_manual}
+\newcommand{\mypublication}[3]{\textit{#1}\\{#2}\\{#3} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END dks_thesis.sty
