@@ -13,5 +13,11 @@
 - create:
     - ~/laboro
 
-#- shell:
-#  - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - echo "hello world!"
+    - sleep 1
+    - 
+      command: ./test.sh
+      stdout: true
+      stderr: true
