@@ -98,22 +98,22 @@ set t_vb=
 " use matchit
 "packadd! matchit
 
-""" MATLAB
-"source ~/.vim/macros/matchit.vim
-
-" Integration of the mlint Matlab code checker with the :make command
-autocmd BufEnter *.m    compiler mlint
-
-" Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-"autocmd FileType python setlocal completeopt-=preview      " suppress
-"docstring window from popup
-
-" python-mode
-let g:pymode_python = 'python3'
+"" MATLAB
+""source ~/.vim/macros/matchit.vim
+"
+"" Integration of the mlint Matlab code checker with the :make command
+"autocmd BufEnter *.m    compiler mlint
+"
+"" Powerline
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+"
+"" jedi-vim
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#popup_select_first = 0
+""autocmd FileType python setlocal completeopt-=preview      " suppress
+""docstring window from popup
+"
+"" python-mode
+"let g:pymode_python = 'python3'

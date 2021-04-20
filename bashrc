@@ -16,8 +16,11 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1000000		# very large
+HISTFILESIZE=1000000000		# very large
+
+# ignore common commands in history
+export HISTIGNORE="pwd:ls:cd"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -115,3 +118,32 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#-------------------------------------------
+# my dotfile 
+#echo 'hello AGAIN world'
+
+# Set Variables
+
+# Create Aliases
+#alias ls='ls -lAFh'  # bug: bash color syntax gone...
+
+# Customise Prompt(s)
+PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+#PROMPT='
+#%1~ %L %# '
+#
+#RPROMPT='%*'
+
+# Add Locations to $PATH Variable
+
+# Write Handy Functions
+# make directory and cd to it
+function mkcd() {
+  mkdir -p "$@" && cd "$_";
+}
+
+# Use Plugins
+
+# Others...
