@@ -14,10 +14,7 @@
     - ~/laboro
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
-    - echo "hello world!"
-    - sleep 1
     - 
-      command: ./test.sh
+      command: ./setup_apt.sh
       stdout: true
       stderr: true

@@ -1,12 +1,14 @@
-""" Pathogen load
 filetype off
-"execute pathogen#infect()
 
-""" vim-plug
+""" Setup vim-plug 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 "   Unix install:
 "   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"   
+"   Reload .vimrc and :PlugInstall to install plugins.
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 " List the plugins here... (`Plug` commands)
@@ -19,11 +21,6 @@ Plug 'https://github.com/junegunn/goyo.vim.git'
 
 " limelight
 Plug 'https://github.com/junegunn/limelight.vim.git'
-
-" MATLAB
-"Plug 'https://github.com/lazywei/vim-matlab.git'
-"Plug 'https://github.com/daeyun/vim-matlab.git'
-"Plug 'daeyun/vim-matlab'
 
 call plug#end()     " update &runtimepath and init plugin system
 " Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -97,23 +94,3 @@ set t_vb=
 
 " use matchit
 "packadd! matchit
-
-"" MATLAB
-""source ~/.vim/macros/matchit.vim
-"
-"" Integration of the mlint Matlab code checker with the :make command
-"autocmd BufEnter *.m    compiler mlint
-"
-"" Powerline
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-"
-"" jedi-vim
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#popup_select_first = 0
-""autocmd FileType python setlocal completeopt-=preview      " suppress
-""docstring window from popup
-"
-"" python-mode
-"let g:pymode_python = 'python3'
