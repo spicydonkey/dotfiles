@@ -2,21 +2,28 @@ filetype off
 
 """ Setup vim-plug 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-plug
+"   A minimalist Vim plugin manager.
 "
-"   Unix install:
-"   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Install
+"   Unix
+"       curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "   
-"   Reload .vimrc and :PlugInstall to install plugins.
+"       Reload .vimrc and :PlugInstall to install plugins.
+"
+" Usage
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 call plug#begin()
 " List the plugins here... (`Plug` commands)
 
-" Seoul256
+" Colorscheme
+" Seoul256.vilow-contrast Vim color scheme based on Seoul Colors. Works on 256-color terminal or on GVim.
 Plug 'junegunn/seoul256.vim'
 
-" goyo
+" goyo - Distraction-free writing in Vim
 Plug 'https://github.com/junegunn/goyo.vim.git'
 
 " limelight
