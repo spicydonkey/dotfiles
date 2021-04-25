@@ -3,11 +3,20 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+echo "Hello from ~/.bashrc"
+
+# Non-interactive shell profile.
+export BASH_ENV="~/.bashrc_non_interactive"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
+
+# Global profile.
+# Sourced by both the interative and the non-interactive modes.
+. ~/.bashrc_global
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -104,7 +113,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -122,7 +130,6 @@ fi
 
 #-------------------------------------------
 # my dotfile 
-#echo 'hello AGAIN world'
 
 # Set Variables
 
@@ -140,10 +147,6 @@ PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\
 # Add Locations to $PATH Variable
 
 # Write Handy Functions
-# make directory and cd to it
-function mkcd() {
-  mkdir -p "$@" && cd "$_";
-}
 
 # Use Plugins
 

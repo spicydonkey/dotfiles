@@ -1,0 +1,18 @@
+#!/bin/bash
+# ~/.bashrc_global: executed by a general bash shell (both interactive and non-interactive).
+
+echo "Hello from ~/.bashrc_global"
+
+
+# Write Handy Functions
+
+# make directory and cd to it
+function mkcd() {
+  mkdir -p "$@" && cd "$_";
+}
+
+# check if command exists
+function exists() {
+  command -v $1 > /dev/null 2>&1
+}
+

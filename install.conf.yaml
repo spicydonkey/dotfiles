@@ -8,6 +8,8 @@
     ~/.vim: 
     ~/.vimrc: 
     ~/.bashrc: 
+    ~/.bashrc_global:
+    ~/.bashrc_non_interactive:
     ~/.gitconfig: 
 
 - create:

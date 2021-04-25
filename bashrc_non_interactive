@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Hello from ~/.bashrc_non_interactive"
+
+# Global configuration.
+. ~/.bashrc_global
