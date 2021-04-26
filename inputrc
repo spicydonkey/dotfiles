@@ -1,0 +1,12 @@
+#$include /etc/inputrc
+
+# match history search with current terminal
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# left/right arrow keys
+"\e[C": forward-char
+"\e[D": backward-char
+
+# bell style
+set bell-style visible

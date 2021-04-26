@@ -11,6 +11,7 @@
     ~/.bashrc_global:
     ~/.bashrc_non_interactive:
     ~/.gitconfig: 
+    ~/.inputrc:
 
 - create:
     - ~/laboro
