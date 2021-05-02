@@ -25,6 +25,9 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# whenever displaying the prompt, write the previous line to disk
+PROMPT_COMMAND='history -a'
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000000		# very large
 HISTFILESIZE=1000000000		# very large
@@ -146,3 +149,6 @@ PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\
 # Use Plugins
 
 # Others...
+
+# Ctrl+D *twice* to reduce accidental exiting
+export IGNOREEOF=1

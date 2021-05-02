@@ -1,5 +1,7 @@
 #$include /etc/inputrc
 
+# TODO: keystroke \e and \M (meta) do not seem to register
+
 # match history search with current terminal
 "\e[A": history-search-backward
 "\e[B": history-search-forward
@@ -10,3 +12,12 @@
 
 # bell style
 set bell-style visible
+
+# insert-option macro
+"\M-o": "\C-p\C-a\M-f "
+
+# tab completion
+set visible-stats on
+
+# cycle through potential completion list 
+"\M-s": menu-complete

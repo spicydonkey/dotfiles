@@ -17,3 +17,4 @@
 
 - how much (if any) of .vim should be git tracked?
 
+- fix macros using meta key in inputrc
